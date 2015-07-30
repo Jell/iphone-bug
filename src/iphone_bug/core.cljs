@@ -1,9 +1,9 @@
-(ns iphone-bug.core
-  (:require-macros [iphone-bug.macro :refer [do-things]]))
+(ns iphone-bug.core)
 
 (def yyyy (hash "yyyy"))
 
-(do-things 1000)
+(dotimes [i 1000]
+  (hash "yyyy"))
 
 (set! (.-onload js/window)
       (fn []
